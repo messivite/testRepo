@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+<div class="row">
+
+      <div class="col-lg-3" id="ogrenci-{{studentData.id}}">
+        <h1 class="my-4">{{ studentData.name }} {{ studentData.surname}}</h1>
+          <h2 class="my-2">{{ studentData.placeOfBirth }}</h1>
+        <div class="list-group">
+        <a href="javascript:void(0)" class="btn btn-primary btn-sml active" id="yardim" style="margin-bottom:1rem">Anlamadım Hocam Yardım!</a>
+
+
+<textarea id="message-box" placeholder="Öğretmene Mesaj Gönder" style="margin-bottom:1rem"></textarea>
+
+
+  <a href="#" class="btn btn-danger btn-sml" id="sendMessageBtn">Mesaj Gönder</a>
+        </div>
+      </div>
+      <!-- /.col-lg-3 -->
+
+
+
+    </div>
+
+    {% block javascripts %}
+        <script src="{{ asset('public/js/lesson.js') }}"></script>
+    {% endblock %}
+{% endblock %}
