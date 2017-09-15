@@ -1,7 +1,29 @@
 testProje
 
+#Uygulama kurulumu
 
-#Project description
+git clone repo url
+
+composer update
+
+Security ile ilgili sorun çıkarsa
+php bin/console security:check
+
+Database bilgileri ve diğer parametreler için
+config/parameters.yaml
+
+Database importundan sonra
+
+Socket servisi çalıştırmak için
+
+php bin/console sockets:start-chat
+
+Uygulamayı web server olarak çalıştırmak için:
+
+php bin/console server:start
+
+
+Proje Açıklaması:
 
 Bu yazdığım ufak Feature' şu şekilde düşündüm - şu kısıma kadar yaptım:
 
@@ -41,3 +63,5 @@ Zaman olmadığı için pek relation bir table kurmadim. direk tablo ve datalari
 4- Arayüz olarak bootstrap 4 kullandım. Zaman olsa Angular Material ile kurgulardım. bootstrap'e göre daha kuvvetli ve hoş geliyor UI elementleri.
 
 5- Son olarak bu bir webapp oldu. Zaman olsaydı bunu RESTAPI şeklinde tasarlayıp REACT NATİVE yada HYBRID mobil uygulamasına bağlama işlemleri daha hızlı olurdu)
+
+6- Uygulama'da Cache olarak bir şey kullanmadım.Kullansaydım Memcache tercih ederdim.
